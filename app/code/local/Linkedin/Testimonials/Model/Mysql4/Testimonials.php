@@ -1,0 +1,5 @@
+<?php
+
+class Linkedin_Testimonials_Model_Mysql4_Testimonials extends Linkedin_Testimonials_Model_Resource_Testimonials
+{
+}

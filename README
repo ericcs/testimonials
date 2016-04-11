@@ -1,0 +1,21 @@
+----------------------------------
+TESTIMONIALS - MAGENTO MODULE
+----------------------------------
+This module allow customers post testimonials in a Magento Store.
+This module was developped and tested in Magento 1.9.2.4
+
+
+----------------------------------
+INSTRUCTIONS TO INSTALL
+----------------------------------
+- Make sure that the magento cache is disabled in "System - Cache Managment".
+- Checkout the project and upload all files to the store server.
+- Open the store and the module will be installed.
+
+
+----------------------------------
+INSTRUCTIONS TO USE
+----------------------------------
+- A new item will be available in the menu "Customer" called "Testimonials".
+  In this menu you can set up the module settings and manage the testimonials.
+

@@ -1,0 +1,39 @@
+<?php
+    /** @var Linkedin_Testimonials_Block_List $this */
+    $testimonials = $this->getTestimonials();
+
+    /** @var Mage_Core_Helper_Data $coreHelper */
+    $coreHelper = Mage::helper('core');
+
+    /** @var Linkedin_Testimonials_Helper_Data $testimonialHelper */
+    $testimonialHelper = Mage::helper('testimonials');
+
+?>
+<h1>Customer's Testimonials</h1>
+
+<div class="buttons-set">
+    <a title="Post your testimonial" class="button" href="<?php echo $testimonialHelper->getPostTestimonialsUrl(); ?>">
+        <span><span>Post Your Testimonial</span></span></a>
+</div>
+
+<?php if($testimonials): ?>
+    <div class="testimonials-list">
+        <ul>
+            <?php foreach($testimonials as $entity): ?>
+                <li>
+                    <strong>Date:</strong> <?php echo  $coreHelper->formatDate($entity->getCreatedAt()); ?><br>
+                    <strong>Customer:</strong> <?php echo $entity->getCustomerName(); ?><br>
+                    <strong>Testimonial:</strong> <?php echo $entity->getMessage(); ?><br>
+                </li>
+            <?php endforeach; ?>
+        </ul>
+    </div>
+    <div class="testimonials-navigation">
+        <?php echo $this->getPagerHtml(); ?>
+    </div>
+
+
+<?php else: ?>
+    There are no Testimonials
+<?php endif; ?>
+

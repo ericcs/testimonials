@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<layout>
+    <default>
+        <reference name="top.links">
+            <action method="addLink" translate="label title"  module="testimonials" ifconfig="testimonials/settings/active"><label>Testimonials</label><url helper="testimonials/getListTestimonialsUrl"/><title>Testimonials</title><prepare/><urlParams/><position>10</position></action>
+        </reference>
+
+        <reference name="head">
+            <action method="addCss" ifconfig="testimonials/settings/active">
+                <stylesheet>css/testimonials.css</stylesheet>
+            </action>
+        </reference>
+
+    </default>
+    <testimonials_testimonials_list>
+        <reference name="root">
+            <action method="setTemplate"><template>page/2columns-right.phtml</template></action>
+        </reference>
+        <reference name="content">
+            <block type="testimonials/list"/>
+        </reference>
+    </testimonials_testimonials_list>
+
+    <testimonials_testimonials_create>
+        <reference name="root">
+            <action method="setTemplate"><template>page/2columns-right.phtml</template></action>
+        </reference>
+        <reference name="content">
+            <block type="testimonials/create"/>
+        </reference>
+    </testimonials_testimonials_create>
+
+
+</layout>

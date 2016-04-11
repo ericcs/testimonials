@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<layout>
+    <testimonials_admin_adminhtml_testimonials_index>
+        <reference name="content">
+            <block type="testimonials/adminhtml_testimonials"/>
+        </reference>
+    </testimonials_admin_adminhtml_testimonials_index>
+    <testimonials_admin_adminhtml_testimonials_edit>
+
+        <reference name="left">
+            <block type="testimonials/adminhtml_testimonials_edit_tabs"/>
+        </reference>
+        <reference name="content">
+            <block type="testimonials/adminhtml_testimonials_edit"/>
+        </reference>
+    </testimonials_admin_adminhtml_testimonials_edit>
+</layout>
